@@ -1,0 +1,10 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /order
+
+customer-service:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8081
