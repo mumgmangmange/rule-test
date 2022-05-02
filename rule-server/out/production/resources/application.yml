@@ -1,0 +1,8 @@
+server:
+  port: 8092
+customer-service: # 임의로 정의
+  ribbon:
+#    eureka:
+#      enabled: false # ribbon 의 서버리스트를 환경파일엥서 가져올지(false) or eureka에서 동적으로 가져올지 설정(true)
+    listOfServers: customer-service:8091, customer-service:9091 # 로드밸런싱 사용 서버 목록
+    ServerListRefreshInterval: 15000 #새로고침 빈도 구성
